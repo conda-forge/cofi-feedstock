@@ -1,11 +1,11 @@
-About cofi
-==========
+About cofi-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cofi-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/inlab-geo/cofi
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cofi-feedstock/blob/main/LICENSE.txt)
 
 Summary: Common Framework for Inference
 
