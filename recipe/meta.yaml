@@ -1,5 +1,5 @@
 {% set name = "cofi" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cofi-{{ version }}.tar.gz
-  sha256: ccf6ba0d558394e934b3aea2a3e22d2e449992044dc723aa9b2c77ace282710b
+  sha256: 32ff62a6d3d394a62bf5fcd8081107a9bf8b56b13a320bbc85658b71a8b2b9da
 
 build:
   noarch: python
@@ -27,6 +27,8 @@ requirements:
     - arviz >=0.9.0
     - findiff >=0.7.0
     - pytorch >=1.10
+    - bayesbay >=0.3.0
+    - neighpy >=0.1.2
 
 test:
   imports:
