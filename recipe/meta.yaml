@@ -1,5 +1,5 @@
 {% set name = "cofi" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cofi-{{ version }}.tar.gz
-  sha256: 32ff62a6d3d394a62bf5fcd8081107a9bf8b56b13a320bbc85658b71a8b2b9da
+  sha256: 7419b62b13dffc2d15dcb68203d5389e23f7e663e3865781effb0408033f8c5f
 
 build:
   noarch: python
