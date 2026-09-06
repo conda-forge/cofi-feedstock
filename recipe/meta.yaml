@@ -1,13 +1,14 @@
 {% set name = "cofi" %}
-{% set version = "0.2.9" %}
+{% set version = "0.2.12" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cofi-{{ version }}.tar.gz
-  sha256: 7419b62b13dffc2d15dcb68203d5389e23f7e663e3865781effb0408033f8c5f
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cofi-{{ version }}.tar.gz
+  sha256: f9f73f1d75773e6ac8a1666d17e1d2c9ab48149a6ef1b03fb4a678791e06b488
 
 build:
   noarch: python
@@ -16,19 +17,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools >=42
     - versioningit
   run:
-    - python >=3.7
-    - numpy >=1.18
-    - scipy >=1.0.0
-    - emcee >=3.1.0
-    - arviz >=0.9.0
-    - findiff >=0.7.0
-    - pytorch >=1.10
+    - python >={{ python_min }}
+    - numpy >=1.23.0
+    - scipy >=1.9.0
+    - emcee >=3.1.5
+    - arviz >=0.23.0
+    - findiff >=0.10.0
+    - pytorch >=2.0.0
     - bayesbay >=0.3.0
-    - neighpy >=0.1.2
+    - neighpy >=0.1.5,!=0.1.8
+    - mealpy >=3.0.0,<3.0.3
 
 test:
   imports:
@@ -37,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/inlab-geo/cofi
@@ -50,3 +54,4 @@ extra:
   recipe-maintainers:
     - JuergHauser
     - jwhhh
+    - ChaiThere
